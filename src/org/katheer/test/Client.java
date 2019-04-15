@@ -23,12 +23,14 @@ public class Client {
         Student std4 = new Student();
         std4.setSname("Abdul");
 
-        //4. If both cosntructor DI and Setter DI is used in a bean, values set by Conntructor DI
+        //4. If both constructor DI and Setter DI is used in a bean, values set by Constructor DI
         // will be overridden by the values set by Setter DI
         Student std5 = new Student("S103", "Vinoth", "Dindigul");
         std5.setSadd("Chennai");
 
-        //5. Constructor DI is recommended only if a bean has large no of properties.
+        //5. Circular dependency issue will raise only in the case of constructor DI, not in setter DI.
+
+        //6. Constructor DI is recommended only if a bean has large no of properties.
         //Setter DI is recommended for small no of properties.
     }
 }
